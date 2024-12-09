@@ -52,5 +52,13 @@ jupyter lab
 Then a browser should open with this project in jupyter lab
 
 ## Running the code
+Run all cells in `2048-group1-project.ipynb` for a demo using Expectimax with a depth of 3!
 
-Run all cells in `2048-group1-project.ipynb` for a demo!
+## Running your own game
+The `play_game` function has the following prototype:
+`play_game(<SearchAlgorithm subclass>, <deprth parameter>, <evaluation function parameters>)` and returns a tuple of `(<turn count>, <game object>)`
+
+For example:
+`turns, game = play_game(Expectimax, 3, [5,4,4,4])`
+or
+`turns, game = play_game(MonteCarloTreeSearch, 48, [4,4,4,0])`
