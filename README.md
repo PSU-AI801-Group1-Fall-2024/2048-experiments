@@ -17,11 +17,11 @@ The primary work is in the notebook named [2048-group1-project.ipynb](2048-group
 #### If you're on *nix and have *make* installed:
 `make up`
 #### Otherwise
-`docker run -p 2048:2048 -v $(pwd):/src -it group-1-2048 /src/start-jupyter-lab.sh`
+`docker run -p 2048:2048 -it group-1-2048 /src/start-jupyter-lab.sh`
 ### After it's running
 Then visit http://localhost:2048 in a browser.
 
-### Getting a shell
+### Getting a shell for development
 #### If you're on *nix and have *make* installed:
 `make shell`
 #### Otherwise

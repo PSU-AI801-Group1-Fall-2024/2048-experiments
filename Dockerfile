@@ -13,3 +13,4 @@ ADD *.sh /src
 EXPOSE 2048
 
 ENTRYPOINT ["/bin/bash"]
+CMD ["/src/start-jupyter-lab.sh"]
