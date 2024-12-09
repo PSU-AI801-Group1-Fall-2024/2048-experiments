@@ -16,7 +16,8 @@ The primary work is in the notebook named [2048-group1-project.ipynb](2048-group
 * **Dockerfile** - Dockerfile that can be used to run our experiments
 * **Makefile** - handy build and run tasks
 
-## Building and running with Docker
+## Buliding and running 
+### With Docker
 The prefered way to run the 2048 experiments is in Docker. Instructions below are provided for building and running
 the project on *nix variants (like Linux and Mac) when they do or do not have `make` installed. Windows commands are
 also listed when they differ, but require powershell. 
@@ -26,42 +27,30 @@ either in the `Makefile` or with directly-issued shell commands
 
 For customization to your local envinment, please see the `Dockerfile`, `Makefile`, and `start-jupyter-lab.sh`
 
-### Building
-#### If you're on *nix and have *make* installed
-`make`
+#### Linux/Mac and have *make* installed
+```
+make
+make up
+```
 
-#### *nix without make or Windows
-`docker build -t group-1-2048 .`
+#### Windows or Linux/Mac *without* make 
+```
+docker build -t group-1-2048 .
+docker run -p 2048:2048 -it group-1-2048
+```
 
-### Running
-#### If you're on *nix and have *make* installed
-`make up`
-#### *nix without make or Windows
-`docker run -p 2048:2048 -it group-1-2048 /src/start-jupyter-lab.sh`
-### After it's running
+##### After it's running
 Then visit http://localhost:2048 in a browser.
 
-### Getting a shell for development
-This process mounts the repo from your host into `/src` so you can develop and preserve your changes to disk.
-#### If you're on *nix and have *make* installed
-`make shell`
-#### *nix without make
-`docker run -p 2048:2048 --entrypoint /bin/bash -v $(pwd):/src -it group-1-2048`
-#### Windows (using powershell)
-`docker run -p 2048:2048 --entrypoint /bin/bash -v ${PWD}:/src -it group-1-2048`
+### Without Docker
+While not recommended, it's also possible to run this notebook outside of Docker. 
+```
+pip install -r ./requirements.txt
+jupyter lab
+```
 
-Once you have a bash shell you can start the Jupyter notebook with 
-`/src/start-jupyter-lab.sh`
+Then a browser should open with this project in jupyter lab
 
-## Running without Docker
-This notebook requires python 3.x (tested with 3.10.12).
-
-First, install the dependencies from the command line.
-`# pip install -r ./requirements.txt`
-
-Then you can run the notebook.
-`# jupyter lab`
-
-## Running a demo
+## Running the code
 
 Run all cells in `2048-group1-project.ipynb` for a demo!
