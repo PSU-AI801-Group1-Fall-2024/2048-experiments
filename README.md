@@ -1,8 +1,20 @@
 # 2048-experiments
 
-Welcome to AI 801 Group 1's project! This is an AI solver for the popular web-based game 2048.
+Welcome to AI 801 Group 1's project! This is a series of experiments performed to design an effective AI solver for the popular web-based game 2048.
 
 The primary work is in the notebook named [2048-group1-project.ipynb](2048-group1-project.ipynb). 
+
+## Team members
+* Christopher Umbel (czu5008@psu.edu, @chrisumbel)
+* Ashok Reddy Buthukuri (arb7237@psu.edu, @ashokreddy6)
+* Hamad Naveed (hbn5141@psu.edu, @HNaveed13)
+
+## Structure of this repository
+* **2048-group1-project.ipynb** - main notebook for the project
+* **data-synthesis.ipynb** - notebook used to perform analysis for the reports and to build data visualizations
+* **data** - folder containing output of our experiments that was used for analysis
+* **Dockerfile** - Dockerfile that can be used to run our experiments
+* **Makefile** - handy build and run tasks
 
 ## Building and running with Docker
 The prefered way to run the 2048 experiments is in Docker. Instructions below are provided for building and running
